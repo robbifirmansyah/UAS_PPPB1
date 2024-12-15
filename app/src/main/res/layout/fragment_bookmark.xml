@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header atau Judul -->
+    <TextView
+        android:id="@+id/tvBookmarkTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bookmarked Articles"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- RecyclerView untuk menampilkan artikel yang di-bookmark -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBookmarks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        android:overScrollMode="ifContentScrolls" />
+
+    <!-- TextView untuk menampilkan pesan jika bookmark kosong -->
+    <TextView
+        android:id="@+id/tvEmptyBookmark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No articles bookmarked yet."
+        android:textSize="16sp"
+        android:gravity="center"
+        android:visibility="gone" />
+</LinearLayout>
